@@ -4,6 +4,17 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+    {
+        "name": "Calculadora",
+        "type": "coreclr",
+        "request": "launch",
+        "preLaunchTask": "build",
+        "program": "${workspaceFolder}/Calculadora/bin/Debug/net6.0-windows/Calculadora.dll",
+        "args": [],
+        "cwd": "${workspaceFolder}/Calculadora",
+        "stopAtEntry": false,
+        "console": "internalConsole"
+    },
         {
             "name": "Introduccion",
             "type": "coreclr",
