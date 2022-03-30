@@ -22,35 +22,15 @@ public partial class Form1 : Form
     private Button btnPunto;
     private Button btnIgual;
     private Button btnDivision;
-    private Button btnPi;
-    private Button btnLog;
-    private Button btnSqrt;
-    private Button btnCuadrado;
-    private Button btnSinh;
-    private Button btnSin;
-    private Button btnDec;
-    private Button btnXy;
-    private Button btnCosh;
-    private Button btnCos;
-    private Button btnBin;
-    private Button btn1x;
-    private Button btnTanh;
-    private Button btnTan;
-    private Button btnHex;
-    private Button btnLnx;
-    private Button btnExp;
-    private Button btnMod;
-    private Button btnOct;
+
     private TextBox txtDisplay;
     private Label lblOperacion;
-    private MenuStrip menu;
     private String operacion;
     private Double resultado;
     public Form1()
     {
         operacion="";
         resultado=0;
-        menu=new MenuStrip();
         txtDisplay= new TextBox();
         lblOperacion= new Label();
         btnBorrarUltimo= new Button();
@@ -73,41 +53,12 @@ public partial class Form1 : Form
         btnPunto= new Button();
         btnIgual= new Button();
         btnDivision= new Button();
-        btnPi = new Button();
-        btnLog = new Button();
-        btnSqrt = new Button();
-        btnCuadrado = new Button();
-        btnSinh = new Button();
-        btnSin = new Button();
-        btnDec = new Button();
-        btnXy = new Button();
-        btnCosh = new Button();
-        btnCos = new Button();
-        btnBin = new Button();
-        btn1x = new Button();
-        btnTanh = new Button();
-        btnTan = new Button();
-        btnHex = new Button();
-        btnLnx = new Button();
-        btnExp = new Button();
-        btnMod = new Button();
-        btnOct = new Button();
         InitializeComponent();
         InicializarComponentes();
     }
 
     private void InicializarComponentes()
     {
-        ToolStripMenuItem catTipo= new ToolStripMenuItem();
-        ToolStripMenuItem miEstandar= new ToolStripMenuItem();
-        ToolStripMenuItem miCientifica= new ToolStripMenuItem();
-        catTipo.Text="Tipo";
-        miEstandar.Text="Estandar";
-        miCientifica.Text="Científica";
-        catTipo.DropDownItems.Add(miEstandar);
-        catTipo.DropDownItems.Add(miCientifica);
-        menu.Items.Add(catTipo);
-        this.Controls.Add(menu);
         this.Size=new Size(600,500);
         this.Text="Calculadora";
         //Tamaño de botones
@@ -131,25 +82,7 @@ public partial class Form1 : Form
         btnPunto.Size=new Size(60,60);
         btnIgual.Size=new Size(60,60);
         btnDivision.Size=new Size(60,60);
-        btnPi.Size=new Size(60,60);
-        btnLog.Size=new Size(60,60);
-        btnSqrt.Size=new Size(60,60);
-        btnCuadrado.Size=new Size(60,60);
-        btnSinh.Size=new Size(60,60);
-        btnSin.Size=new Size(60,60);
-        btnDec.Size=new Size(60,60);
-        btnXy.Size=new Size(60,60);
-        btnCosh.Size=new Size(60,60);
-        btnCos.Size=new Size(60,60);
-        btnBin.Size=new Size(60,60);
-        btn1x.Size=new Size(60,60);
-        btnTanh.Size=new Size(60,60);
-        btnTan.Size=new Size(60,60);
-        btnHex.Size=new Size(60,60);
-        btnLnx.Size=new Size(60,60);
-        btnExp.Size=new Size(60,60);
-        btnMod.Size=new Size(60,60);
-        btnOct.Size=new Size(60,60);
+        
         txtDisplay.Size=new Size(558,50);
         txtDisplay.Multiline=true;
         lblOperacion.AutoSize=true;
@@ -176,31 +109,11 @@ public partial class Form1 : Form
         btnPunto.Text=".";
         btnIgual.Text="=";
         btnDivision.Text="/";
-        btnPi.Text="π";
-        btnLog.Text="Log";
-        btnSqrt.Text="Sqrt";
-        btnCuadrado.Text="x^2";
-        btnSinh.Text="Sinh";
-        btnSin.Text="Sin";
-        btnDec.Text="Dec";
-        btnXy.Text="x^y";
-        btnCosh.Text="Cosh";
-        btnCos.Text="Cos";
-        btnBin.Text="Bin";
-        btn1x.Text="1/x";
-        btnTanh.Text="Tanh";
-        btnTan.Text="Tan";
-        btnHex.Text="Hex";
-        btnLnx.Text="Ln x";
-        btnExp.Text="Exp";
-        btnMod.Text="Mod";
-        btnOct.Text="Oct";
 
         //Posicion
         txtDisplay.Location=new Point(10,30);
         lblOperacion.Location=new Point(10,30);
         
-
         List<Button> lista = new List<Button>();
         lista.Add(btnBorrarUltimo);
         lista.Add(btnBorrarActual);
@@ -226,42 +139,6 @@ public partial class Form1 : Form
         int y=85;
         int count=0;
         foreach (Button btn in lista)
-        {
-            if(count==4){
-                x=10;
-                y+=67;
-                count=0;
-            }
-            btn.Location=new Point(x,y);
-            btn.Click+=new EventHandler(btn_click);
-            this.Controls.Add(btn);
-            x+=67;
-            count++;
-        }
-        List<Button> cientifica = new List<Button>();
-        cientifica.Add(btnPi);
-        cientifica.Add(btnLog);
-        cientifica.Add(btnSqrt);
-        cientifica.Add(btnCuadrado);
-        cientifica.Add(btnSinh);
-        cientifica.Add(btnSin);
-        cientifica.Add(btnDec);
-        cientifica.Add(btnXy);
-        cientifica.Add(btnCosh);
-        cientifica.Add(btnCos);
-        cientifica.Add(btnBin);
-        cientifica.Add(btn1x);
-        cientifica.Add(btnTanh);
-        cientifica.Add(btnTan);
-        cientifica.Add(btnHex);
-        cientifica.Add(btnLnx);
-        cientifica.Add(btnExp);
-        cientifica.Add(btnMod);
-        cientifica.Add(btnOct);
-        x=10;
-        y=85;
-        count=0;
-        foreach (Button btn in cientifica)
         {
             if(count==4){
                 x=10;
