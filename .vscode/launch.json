@@ -4,6 +4,17 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+        {
+            "name": "Crud_Cervezas",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/Crud_Cervezas/bin/Debug/net6.0-windows/Crud_Cervezas.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Crud_Cervezas",
+            "stopAtEntry": false,
+            "console": "internalConsole"
+        },
     {
         "name": "Calculadora",
         "type": "coreclr",
